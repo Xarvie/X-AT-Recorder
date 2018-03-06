@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\encoder\7z\7zdeflate.cc" />
+    <ClCompile Include="..\..\encoder\7z\7zlzma.cc" />
+    <ClCompile Include="..\..\encoder\7z\AriBitCoder.cc" />
+    <ClCompile Include="..\..\encoder\7z\CRC.cc" />
+    <ClCompile Include="..\..\encoder\7z\DeflateDecoder.cc" />
+    <ClCompile Include="..\..\encoder\7z\DeflateEncoder.cc" />
+    <ClCompile Include="..\..\encoder\7z\HuffmanEncoder.cc" />
+    <ClCompile Include="..\..\encoder\7z\IInOutStreams.cc" />
+    <ClCompile Include="..\..\encoder\7z\InByte.cc" />
+    <ClCompile Include="..\..\encoder\7z\LenCoder.cc" />
+    <ClCompile Include="..\..\encoder\7z\LiteralCoder.cc" />
+    <ClCompile Include="..\..\encoder\7z\LSBFDecoder.cc" />
+    <ClCompile Include="..\..\encoder\7z\LSBFEncoder.cc" />
+    <ClCompile Include="..\..\encoder\7z\LZMA.cc" />
+    <ClCompile Include="..\..\encoder\7z\LZMADecoder.cc" />
+    <ClCompile Include="..\..\encoder\7z\LZMAEncoder.cc" />
+    <ClCompile Include="..\..\encoder\7z\OutByte.cc" />
+    <ClCompile Include="..\..\encoder\7z\WindowIn.cc" />
+    <ClCompile Include="..\..\encoder\7z\WindowOut.cc" />
+    <ClCompile Include="..\..\encoder\enc\apng2gif.cpp" />
+    <ClCompile Include="..\..\encoder\enc\apngasm.cpp" />
+    <ClCompile Include="..\..\encoder\enc\apngdis.cpp" />
+    <ClCompile Include="..\..\encoder\enc\apngopt.cpp" />
+    <ClCompile Include="..\..\encoder\enc\gif2apng.cpp" />
+    <ClCompile Include="..\..\encoder\enc\image.cpp" />
+    <ClCompile Include="..\..\encoder\enc\pub.cpp" />
+    <ClCompile Include="..\..\encoder\libpng\png.c" />
+    <ClCompile Include="..\..\encoder\libpng\pngerror.c" />
+    <ClCompile Include="..\..\encoder\libpng\pngget.c" />
+    <ClCompile Include="..\..\encoder\libpng\pngmem.c" />
+    <ClCompile Include="..\..\encoder\libpng\pngpread.c" />
+    <ClCompile Include="..\..\encoder\libpng\pngread.c" />
+    <ClCompile Include="..\..\encoder\libpng\pngrio.c" />
+    <ClCompile Include="..\..\encoder\libpng\pngrtran.c" />
+    <ClCompile Include="..\..\encoder\libpng\pngrutil.c" />
+    <ClCompile Include="..\..\encoder\libpng\pngset.c" />
+    <ClCompile Include="..\..\encoder\libpng\pngtrans.c" />
+    <ClCompile Include="..\..\encoder\libpng\pngwio.c" />
+    <ClCompile Include="..\..\encoder\libpng\pngwrite.c" />
+    <ClCompile Include="..\..\encoder\libpng\pngwtran.c" />
+    <ClCompile Include="..\..\encoder\libpng\pngwutil.c" />
+    <ClCompile Include="..\..\encoder\zlib\adler32.c" />
+    <ClCompile Include="..\..\encoder\zlib\compress.c" />
+    <ClCompile Include="..\..\encoder\zlib\crc32.c" />
+    <ClCompile Include="..\..\encoder\zlib\deflate.c" />
+    <ClCompile Include="..\..\encoder\zlib\gzclose.c" />
+    <ClCompile Include="..\..\encoder\zlib\gzlib.c" />
+    <ClCompile Include="..\..\encoder\zlib\gzread.c" />
+    <ClCompile Include="..\..\encoder\zlib\gzwrite.c" />
+    <ClCompile Include="..\..\encoder\zlib\infback.c" />
+    <ClCompile Include="..\..\encoder\zlib\inffast.c" />
+    <ClCompile Include="..\..\encoder\zlib\inflate.c" />
+    <ClCompile Include="..\..\encoder\zlib\inftrees.c" />
+    <ClCompile Include="..\..\encoder\zlib\trees.c" />
+    <ClCompile Include="..\..\encoder\zlib\uncompr.c" />
+    <ClCompile Include="..\..\encoder\zlib\zutil.c" />
+    <ClCompile Include="..\..\encoder\zopfli\blocksplitter.c" />
+    <ClCompile Include="..\..\encoder\zopfli\cache.c" />
+    <ClCompile Include="..\..\encoder\zopfli\deflate-zopfli.c" />
+    <ClCompile Include="..\..\encoder\zopfli\gzip_container.c" />
+    <ClCompile Include="..\..\encoder\zopfli\hash.c" />
+    <ClCompile Include="..\..\encoder\zopfli\katajainen.c" />
+    <ClCompile Include="..\..\encoder\zopfli\lz77.c" />
+    <ClCompile Include="..\..\encoder\zopfli\squeeze.c" />
+    <ClCompile Include="..\..\encoder\zopfli\tree.c" />
+    <ClCompile Include="..\..\encoder\zopfli\util.c" />
+    <ClCompile Include="..\..\encoder\zopfli\zlib_container.c" />
+    <ClCompile Include="..\..\encoder\zopfli\zopfli_lib.c" />
+    <ClCompile Include="..\..\test.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\xpng;..\..\xpng\encoder;..\..\xpng\encoder\enc;..\..\xpng\encoder\libpng;..\..\xpng\encoder\zopfli;..\..\xpng\encoder\zlib;..\..\xpng\encoder\7z</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\encoder\7z\7z.h" />
+    <ClInclude Include="..\..\encoder\7z\AriBitCoder.h" />
+    <ClInclude Include="..\..\encoder\7z\AriConst.h" />
+    <ClInclude Include="..\..\encoder\7z\AriPrice.h" />
+    <ClInclude Include="..\..\encoder\7z\BinTree.h" />
+    <ClInclude Include="..\..\encoder\7z\BinTree2.h" />
+    <ClInclude Include="..\..\encoder\7z\BinTree2Main.h" />
+    <ClInclude Include="..\..\encoder\7z\BinTree3.h" />
+    <ClInclude Include="..\..\encoder\7z\BinTree3Main.h" />
+    <ClInclude Include="..\..\encoder\7z\BinTree3Z.h" />
+    <ClInclude Include="..\..\encoder\7z\BinTree3ZMain.h" />
+    <ClInclude Include="..\..\encoder\7z\BinTree4.h" />
+    <ClInclude Include="..\..\encoder\7z\BinTree4b.h" />
+    <ClInclude Include="..\..\encoder\7z\BinTree4bMain.h" />
+    <ClInclude Include="..\..\encoder\7z\BinTree4Main.h" />
+    <ClInclude Include="..\..\encoder\7z\BinTreeMain.h" />
+    <ClInclude Include="..\..\encoder\7z\BinTreeMF.h" />
+    <ClInclude Include="..\..\encoder\7z\BinTreeMFMain.h" />
+    <ClInclude Include="..\..\encoder\7z\BitTreeCoder.h" />
+    <ClInclude Include="..\..\encoder\7z\Const.h" />
+    <ClInclude Include="..\..\encoder\7z\CRC.h" />
+    <ClInclude Include="..\..\encoder\7z\DeflateDecoder.h" />
+    <ClInclude Include="..\..\encoder\7z\DeflateEncoder.h" />
+    <ClInclude Include="..\..\encoder\7z\HuffmanDecoder.h" />
+    <ClInclude Include="..\..\encoder\7z\HuffmanEncoder.h" />
+    <ClInclude Include="..\..\encoder\7z\IInOutStreams.h" />
+    <ClInclude Include="..\..\encoder\7z\InByte.h" />
+    <ClInclude Include="..\..\encoder\7z\LenCoder.h" />
+    <ClInclude Include="..\..\encoder\7z\LiteralCoder.h" />
+    <ClInclude Include="..\..\encoder\7z\LSBFDecoder.h" />
+    <ClInclude Include="..\..\encoder\7z\LSBFEncoder.h" />
+    <ClInclude Include="..\..\encoder\7z\LZMA.h" />
+    <ClInclude Include="..\..\encoder\7z\LZMADecoder.h" />
+    <ClInclude Include="..\..\encoder\7z\LZMAEncoder.h" />
+    <ClInclude Include="..\..\encoder\7z\OutByte.h" />
+    <ClInclude Include="..\..\encoder\7z\Portable.h" />
+    <ClInclude Include="..\..\encoder\7z\RangeCoder.h" />
+    <ClInclude Include="..\..\encoder\7z\RCDefs.h" />
+    <ClInclude Include="..\..\encoder\7z\WindowIn.h" />
+    <ClInclude Include="..\..\encoder\7z\WindowOut.h" />
+    <ClInclude Include="..\..\encoder\enc\enc.h" />
+    <ClInclude Include="..\..\encoder\enc\image.h" />
+    <ClInclude Include="..\..\encoder\enc\pub.h" />
+    <ClInclude Include="..\..\encoder\libpng\png.h" />
+    <ClInclude Include="..\..\encoder\libpng\pngconf.h" />
+    <ClInclude Include="..\..\encoder\libpng\pngdebug.h" />
+    <ClInclude Include="..\..\encoder\libpng\pnginfo.h" />
+    <ClInclude Include="..\..\encoder\libpng\pnglibconf.h" />
+    <ClInclude Include="..\..\encoder\libpng\pngpriv.h" />
+    <ClInclude Include="..\..\encoder\libpng\pngstruct.h" />
+    <ClInclude Include="..\..\encoder\zlib\crc32.h" />
+    <ClInclude Include="..\..\encoder\zlib\deflate.h" />
+    <ClInclude Include="..\..\encoder\zlib\gzguts.h" />
+    <ClInclude Include="..\..\encoder\zlib\inffast.h" />
+    <ClInclude Include="..\..\encoder\zlib\inffixed.h" />
+    <ClInclude Include="..\..\encoder\zlib\inflate.h" />
+    <ClInclude Include="..\..\encoder\zlib\inftrees.h" />
+    <ClInclude Include="..\..\encoder\zlib\trees.h" />
+    <ClInclude Include="..\..\encoder\zlib\zconf.h" />
+    <ClInclude Include="..\..\encoder\zlib\zlib.h" />
+    <ClInclude Include="..\..\encoder\zlib\zutil.h" />
+    <ClInclude Include="..\..\encoder\zopfli\blocksplitter.h" />
+    <ClInclude Include="..\..\encoder\zopfli\cache.h" />
+    <ClInclude Include="..\..\encoder\zopfli\deflate.h" />
+    <ClInclude Include="..\..\encoder\zopfli\gzip_container.h" />
+    <ClInclude Include="..\..\encoder\zopfli\hash.h" />
+    <ClInclude Include="..\..\encoder\zopfli\katajainen.h" />
+    <ClInclude Include="..\..\encoder\zopfli\lz77.h" />
+    <ClInclude Include="..\..\encoder\zopfli\squeeze.h" />
+    <ClInclude Include="..\..\encoder\zopfli\symbols.h" />
+    <ClInclude Include="..\..\encoder\zopfli\tree.h" />
+    <ClInclude Include="..\..\encoder\zopfli\util.h" />
+    <ClInclude Include="..\..\encoder\zopfli\zlib_container.h" />
+    <ClInclude Include="..\..\encoder\zopfli\zopfli.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\encoder\7z\README" />
+    <None Include="..\..\encoder\zopfli\CONTRIBUTORS" />
+    <None Include="..\..\encoder\zopfli\COPYING" />
+    <None Include="..\..\encoder\zopfli\README" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{C532F8F2-5ED8-4984-B28A-BD8EC73052F4}</ProjectGuid>
+    <RootNamespace>Project3</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>
+      </SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\ftp\Desktop\xpng;C:\Users\ftp\Desktop\xpng\libpng;C:\Users\ftp\Desktop\xpng\zlib;C:\Users\ftp\Desktop\xpng\7z</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;FEATURE_7ZIP;_USING_V110_SDK71_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4018;4244;4305;4996</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\ftp\Desktop\xpng;C:\Users\ftp\Desktop\xpng\encoder;C:\Users\ftp\Desktop\xpng\encoder\enc;C:\Users\ftp\Desktop\xpng\encoder\libpng;C:\Users\ftp\Desktop\xpng\encoder\zopfli;C:\Users\ftp\Desktop\xpng\encoder\zlib;C:\Users\ftp\Desktop\xpng\encoder\7z</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;FEATURE_7ZIP;_USING_V110_SDK71_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4018;4244;4305;4996</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\ftp\Desktop\xpng;C:\Users\ftp\Desktop\xpng\libpng;C:\Users\ftp\Desktop\xpng\zlib;C:\Users\ftp\Desktop\xpng\7z</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;FEATURE_7ZIP;_USING_V110_SDK71_;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4018;4244;4305;4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>
+      </SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\..\..\xpng;..\..\..\xpng\encoder;..\..\..\xpng\encoder\enc;..\..\..\xpng\encoder\libpng;..\..\..\xpng\encoder\zopfli;..\..\..\xpng\encoder\zlib;..\..\..\xpng\encoder\7z</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;FEATURE_7ZIP;FEATURE_ZOPFLI;_USING_V110_SDK71_;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4018;4244;4305;4996</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
